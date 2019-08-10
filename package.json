@@ -1,0 +1,29 @@
+{
+  "name": "parcial2",
+  "version": "1.0.0",
+  "description": "Parcial",
+  "main": "index.js",
+  "dependencies": {
+    "@uirouter/angularjs": "^1.0.3",
+    "angular": "^1.7.8",
+    "angular-animate": "^1.7.8",
+    "angular-sanitize": "^1.7.8",
+    "angular-ui-bootstrap": "^2.5.6",
+    "bootstrap": "^3.3.7",
+    "lite-server": "^2.5.3"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/edelmorataya/Parcial2AngularJS.git"
+  },
+  "author": "Edel Morataya",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/edelmorataya/Parcial2AngularJS/issues"
+  },
+  "homepage": "https://github.com/edelmorataya/Parcial2AngularJS#readme"
+}
