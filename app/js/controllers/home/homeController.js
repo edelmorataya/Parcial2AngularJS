@@ -4,7 +4,7 @@
 
     let homeModule = angular.module("mainApp");
 
-    homeModule.controller('homeController', function(platforms){
+    homeModule.controller('homeController', function(platforms, $userPreferences){
         let vm = this;
         vm.plats = platforms.Links.Data;
 
@@ -15,9 +15,12 @@
             { name: "Lucas", type: "cat", sex: "male" },
             { name: "Peter", type: "spider", sex: "male" },
         ];      
-        
+
+        vm.eng = $userPreferences.switchData();
+    
 
     });
+
 
 }
 
