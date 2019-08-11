@@ -6,13 +6,15 @@
 
     homeModule.controller('homeController', function(platforms){
         let vm = this;
-        vm.test = platforms;
         vm.plats = platforms.Links.Data;
 
-
         
-        
-
+        vm.animals = [    
+            { name: "Firulais", type: "dog", sex: "male" },
+            { name: "Cookie", type: "dog", sex: "female" },
+            { name: "Lucas", type: "cat", sex: "male" },
+            { name: "Peter", type: "spider", sex: "male" },
+        ];      
         
 
     });

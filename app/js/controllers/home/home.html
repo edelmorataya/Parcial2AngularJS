@@ -2,16 +2,55 @@
 
 
 <div>
-    <h2> Constant </h2>
-    
-    <tbody>
-        <h4>Platforms</h4>
-        {{vm.plats}}
-        <tr ng-repeat="plat in vm.plats">
-            <td>{{plat.id}}</td>
-            <td>{{plat.name}}</td>
-            <td>{{plat.link}}</td>
-        </tr>
-    </tbody>
+    <div ng-controller="homeController" >
+        <div class="container">
+        <h2> Constant </h2>
+        
+        
+        <tbody>
+            <h4>Platforms</h4>
+            <table class="table">
+                    <thead>
+                            <th>Id</th>
+                            <th>Name</th>
+                            <th>Link</th>
+                    </thead>
+                    <tr ng-repeat="plat in vm.plats">
+                            <td>{{plat.id}}</td>
+                            <td>{{plat.name}}</td>
+                            <td>{{plat.link}}</td>
+                    </tr>
+            </table>
+        </tbody>
 
-</div>
+        <h2> Filter</h2>
+
+        <h4>Animals</h4>
+                
+                <label>Filtrar por genero</label>
+                <select class="form-control" ng-model="vm.search.sex">
+                    <option value="default">Default</option>
+                    <option value="female">female</option>
+                    <option value="male">Male</option>
+                </select>
+                <label>Filtrar por tipo</label>
+                <select class="form-control" ng-model="vm.search.type">
+                        <option value="dog">Dog</option>
+                        <option value="cat">Cat</option>
+                        <option value="spider">Spider</option>
+                    </select>
+                <table class="table">
+                        
+                        <thead>
+                                <th>Name</th>
+                                <th>Type</th>
+                                <th>Sex</th>
+                        </thead>
+                        <tr ng-repeat="animal in vm.animals | filter:vm.search">
+                                <td>{{animal.name}}</td>
+                                <td>{{animal.type}}</td>
+                                <td>{{animal.sex}}</td>
+                        </tr>
+                </table>       
+    
+    </div>
